@@ -29,22 +29,29 @@ export class LoginComponent implements OnInit {
   }
 
   login(user: User) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'origin': 'https://infallible-wright-a8d49d.netlify.app/login'
+        'Content-Type':  'application/json',
+        'Authorization': ''
+      })
+    };
     
     if(user.nome !== ""){
-      this.http.post(`${this.apiURL}/saveUser`, user)
+      this.http.post(`${this.apiURL}/saveUser`, user, httpOptions)
       .subscribe(result => {
         window.localStorage.setItem('currentUser', JSON.stringify(result));
         this.r.navigate(['/home']);
       });
     } else {
       if(user.senha !== ""){
-        this.http.post(`${this.apiURL}/session`, user)
+        this.http.post(`${this.apiURL}/session`, user, httpOptions)
         .subscribe(result => {
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
         });
       } else {
-        this.http.post(`${this.apiURL}/forgot`, user)
+        this.http.post(`${this.apiURL}/forgot`, user, httpOptions)
         .subscribe(result => {
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
