@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   public session: any;
 
   constructor(private route: ActivatedRoute, private http : HttpClient, private r: Router){
-    this.apiURL = 'http://localhost:3333';
+    this.apiURL = 'https://api-login-recuperacao.herokuapp.com/';
     this.rota = r;
   }
 

@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   public rota: Router;
 
   constructor(private http : HttpClient, private r: Router){
-    this.apiURL = 'http://localhost:3333';
+    this.apiURL = 'https://api-login-recuperacao.herokuapp.com';
     this.rota = r;
   }
 
@@ -32,8 +32,7 @@ export class LoginComponent implements OnInit {
     const httpOptions = {
       headers: new HttpHeaders({
         'origin': 'https://infallible-wright-a8d49d.netlify.app/login',
-        'Content-Type':  'application/json',
-        'Authorization': ''
+        'Content-Type':  'application/json'
       })
     };
     
