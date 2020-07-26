@@ -1,0 +1,27 @@
+<div class="flex-wrap">
+    <div class="card" style="width: 38rem;">
+        <div class="card-body">
+            <div class="row">
+                <p>Nome: {{ home_resumo?.nome }}</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <p>Email: {{ home_resumo?.email }}</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <p>Senha: {{ home_resumo?.senha }}</p>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <p>Token: {{session?.token}}</p>
+            </div>
+        </div>
+    </div>
+    <div id="input_logout" class="row">
+        <a [routerLink]="['/login']" style="color: #000;">logout</a>
+    </div>
+</div>

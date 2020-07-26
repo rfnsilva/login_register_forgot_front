@@ -1,0 +1,26 @@
+.flex-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#input_logout {
+    justify-content: center;
+    align-items: center;
+
+    width: 210px;
+    margin-top: 10px;
+    background-color: #ffc107;
+    border-radius: 20%;
+    height: 34px;
+}

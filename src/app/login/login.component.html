@@ -1,0 +1,20 @@
+<div class="flex-wrap">
+    <fieldset>
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" action novalidate>
+            <input type="radio" name="rg" id="sign-in" checked/>
+            <input type="radio" name="rg" id="sign-up" />
+            <input type="radio" name="rg" id="reset" />        
+
+            <label for="sign-in">Sign in</label>
+            <label for="sign-up">Sign up</label>
+            <label for="reset">Reset</label>  
+
+            <input formControlName="nome" name="nome" class="sign-up" type="text" placeholder="Nome" />
+            <input formControlName="email" name="email" class="sign-up sign-in reset" type="email" placeholder="Email" />
+            <input formControlName="senha" name="senha" class="sign-up sign-in" type="password" placeholder ="Password" />
+            <input formControlName="senha_confirmacao" name="senha_confirmacao" class="sign-up" type="password" placeholder ="Repeat Password" />
+            <button type="submit" [disabled]="!profileForm.valid" name="button">Submit</button>        
+            
+        </form>
+    </fieldset>
+</div>
