@@ -48,13 +48,13 @@ export class LoginComponent implements OnInit {
       });
     } else {
       if(user.senha !== ""){
-        this.http.post(`${this.apiURL}/session`, user, httpOptions)
+        this.http.post(`${this.apiURL}/session`, user, {headers})
         .subscribe(result => {
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
         });
       } else {
-        this.http.post(`${this.apiURL}/forgot`, user, httpOptions)
+        this.http.post(`${this.apiURL}/forgot`, user, {headers})
         .subscribe(result => {
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
