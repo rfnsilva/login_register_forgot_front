@@ -29,15 +29,19 @@ export class LoginComponent implements OnInit {
   }
 
   login(user: User) {
-    const httpOptions = {
+    /*const httpOptions = {
       headers: new HttpHeaders({
         'origin': 'https://infallible-wright-a8d49d.netlify.app/login',
         'Content-Type':  'application/json'
       })
-    };
+    };*/
+
+    const headers= new HttpHeaders()
+    .set('content-type', 'application/json')
+    .set('Access-Control-Allow-Origin', '*');
     
     if(user.nome !== ""){
-      this.http.post(`${this.apiURL}/saveUser`, user, httpOptions)
+      this.http.post(`${this.apiURL}/saveUser`, user, {headers})
       .subscribe(result => {
         window.localStorage.setItem('currentUser', JSON.stringify(result));
         this.r.navigate(['/home']);
