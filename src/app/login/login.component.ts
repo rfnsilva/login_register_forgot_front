@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   public rota: Router;
 
   constructor(private http : HttpClient, private r: Router){
-    this.apiURL = 'http://localhost:3333';
+    this.apiURL = 'https://api-login-recuperacao.herokuapp.com';
     this.rota = r;
   }
 
