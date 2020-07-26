@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   login(user: User) {
     const httpOptions = {
       headers: new HttpHeaders({
-        'origin': 'https://infallible-wright-a8d49d.netlify.app/login'
+        'origin': 'https://infallible-wright-a8d49d.netlify.app/login',
         'Content-Type':  'application/json',
         'Authorization': ''
       })

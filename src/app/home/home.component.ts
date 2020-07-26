@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
     
     const httpOptions = {
       headers: new HttpHeaders({
+        'origin': 'https://infallible-wright-a8d49d.netlify.app/home',
         'Content-Type':  'application/json',
         'Authorization': `Bearer ${this.session.token}`
       })
