@@ -42,7 +42,8 @@ export class LoginComponent implements OnInit {
     
     if(user.nome !== ""){
       this.http.post(`${this.apiURL}/saveUser`, user, { 'headers': headers })
-      .subscribe(result => {
+        .subscribe(result => {
+        console.log(result)
         window.localStorage.setItem('currentUser', JSON.stringify(result));
         this.r.navigate(['/home']);
       });
