@@ -2,7 +2,7 @@
 
 repositório com codigo criado para a funcionalidade de cadastrar usuarios, realizar login e recuperar a senha do usuario
 
-## Para testa 
+## Para testar
 
 rode ng server
 
