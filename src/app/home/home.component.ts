@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.session = JSON.parse(window.localStorage.getItem('currentUser'));
-
+    console.log(this.session.token)
     const headers= new HttpHeaders()
      .set('content-type', 'application/json')
       .set('Access-Control-Allow-Origin', '*')
