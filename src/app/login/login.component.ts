@@ -29,13 +29,6 @@ export class LoginComponent implements OnInit {
   }
 
   login(user: User) {
-    /*const httpOptions = {
-      headers: new HttpHeaders({
-        'origin': 'https://infallible-wright-a8d49d.netlify.app/login',
-        'Content-Type':  'application/json'
-      })
-    };*/
-
     const headers= new HttpHeaders()
     .set('content-type', 'application/json')
     .set('Access-Control-Allow-Origin', '*');
@@ -51,12 +44,14 @@ export class LoginComponent implements OnInit {
       if(user.senha !== ""){
         this.http.post(`${this.apiURL}/session`, user, { 'headers': headers })
         .subscribe(result => {
+          console.log(result)
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
         });
       } else {
         this.http.post(`${this.apiURL}/forgot`, user, { 'headers': headers })
         .subscribe(result => {
+          console.log(result)
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
         });

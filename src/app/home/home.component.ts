@@ -24,16 +24,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.session = JSON.parse(window.localStorage.getItem('currentUser'));
-    
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'origin': 'https://infallible-wright-a8d49d.netlify.app/home',
-        'Content-Type':  'application/json',
-        'Authorization': `Bearer ${this.session.token}`
-      })
-    };
 
-    this.http.get(`${this.apiURL}/home/${this.session.id}`, httpOptions)
+    const headers= new HttpHeaders()
+     .set('content-type', 'application/json')
+      .set('Access-Control-Allow-Origin', '*')
+      .set('Authorization', `Bearer ${this.session.token}`);
+    
+
+    this.http.get(`${this.apiURL}/home/${this.session.id}`, { 'headers': headers })
     .subscribe(result => {
       this.home_resumo = result;
     });
