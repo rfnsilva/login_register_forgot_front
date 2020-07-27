@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   });	
   readonly apiURL : string;
   public rota: Router;
-  
+
   @Input()
   public reset: any;
   public reset_aux: boolean = false;
@@ -53,8 +53,7 @@ export class LoginComponent implements OnInit {
       } else {
         this.http.post(`${this.apiURL}/forgot`, user, { 'headers': headers })
          .subscribe(result => {
-           this.reset = result;
-           this.reset_aux = true;
+           console.log(result);
          });
       }
     }
