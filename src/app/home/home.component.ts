@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { User } from '../models/User';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
