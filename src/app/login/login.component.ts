@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   });	
   readonly apiURL : string;
   public rota: Router;
+  
   @Input()
   public reset: any;
   public reset_aux: boolean = false;
