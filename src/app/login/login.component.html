@@ -13,6 +13,9 @@
             <input formControlName="email" name="email" class="sign-up sign-in reset" type="email" placeholder="Email" />
             <input formControlName="senha" name="senha" class="sign-up sign-in" type="password" placeholder ="Password" />
             <input formControlName="senha_confirmacao" name="senha_confirmacao" class="sign-up" type="password" placeholder ="Repeat Password" />
+            <ng-template [ngIf]="reset_aux">
+                <h4>{{reset}}</h4>
+            </ng-template>
             <button type="submit" [disabled]="!profileForm.valid" name="button">Submit</button>        
             
         </form>

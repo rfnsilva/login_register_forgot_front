@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -19,6 +19,9 @@ export class LoginComponent implements OnInit {
   });	
   readonly apiURL : string;
   public rota: Router;
+  @Input()
+  public reset: any;
+  public reset_aux: boolean = false;
 
   constructor(private http : HttpClient, private r: Router){
     this.apiURL = 'https://api-login-recuperacao.herokuapp.com';
@@ -48,10 +51,10 @@ export class LoginComponent implements OnInit {
         });
       } else {
         this.http.post(`${this.apiURL}/forgot`, user, { 'headers': headers })
-        .subscribe(result => {
-          window.localStorage.setItem('currentUser', JSON.stringify(result));
-          this.r.navigate(['/home']);
-        });
+         .subscribe(result => {
+           this.reset = result;
+           this.reset_aux = true;
+         });
       }
     }
   }
