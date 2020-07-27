@@ -41,20 +41,20 @@ export class LoginComponent implements OnInit {
     .set('Access-Control-Allow-Origin', '*');
     
     if(user.nome !== ""){
-      this.http.post(`${this.apiURL}/saveUser`, user, {headers})
+      this.http.post(`${this.apiURL}/saveUser`, user, { 'headers': headers })
       .subscribe(result => {
         window.localStorage.setItem('currentUser', JSON.stringify(result));
         this.r.navigate(['/home']);
       });
     } else {
       if(user.senha !== ""){
-        this.http.post(`${this.apiURL}/session`, user, {headers})
+        this.http.post(`${this.apiURL}/session`, user, { 'headers': headers })
         .subscribe(result => {
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
         });
       } else {
-        this.http.post(`${this.apiURL}/forgot`, user, {headers})
+        this.http.post(`${this.apiURL}/forgot`, user, { 'headers': headers })
         .subscribe(result => {
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
