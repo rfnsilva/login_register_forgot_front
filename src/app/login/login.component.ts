@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
     if(user.nome !== ""){
       this.http.post(`${this.apiURL}/saveUser`, user, { 'headers': headers })
         .subscribe(result => {
-        console.log(result)
         window.localStorage.setItem('currentUser', JSON.stringify(result));
         this.r.navigate(['/home']);
       });
@@ -44,14 +43,12 @@ export class LoginComponent implements OnInit {
       if(user.senha !== ""){
         this.http.post(`${this.apiURL}/session`, user, { 'headers': headers })
         .subscribe(result => {
-          console.log(result)
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
         });
       } else {
         this.http.post(`${this.apiURL}/forgot`, user, { 'headers': headers })
         .subscribe(result => {
-          console.log(result)
           window.localStorage.setItem('currentUser', JSON.stringify(result));
           this.r.navigate(['/home']);
         });
