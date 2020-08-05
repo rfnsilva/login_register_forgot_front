@@ -8,8 +8,7 @@
 
 <p align="center"> basta executar no terminal ng server e acessar o localost:4200 </p>
 
-<h2 align="center"> Build </h2>
-<img src="https://img.shields.io/static/v1?label=angular&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
+<img src="https://img.shields.io/static/v1?label=angular&message=BUILD&color=red&style=for-the-badge&logo=ANGULAR"/>
 
 <p align="center"> basta executar no terminal ng build </p>
 
