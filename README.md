@@ -1,12 +1,13 @@
-# Frontend tela de login, cadastro e recuperar/trocar senha
+<h1 align="center"> Login, Registro, e forgot </h1>
 
-repositório com codigo criado para a funcionalidade de cadastrar usuarios, realizar login e recuperar a senha do usuario
+<p align="justify"> Escrever descrição, que ficará com texto justificado </p>
+
 
 ## Para testar
 
-rode ng server
+basta executar no terminal ng server e acessar o localost:4200
 
 ## Build
 
-rode ng build
+basta executar no terminal ng build
 
