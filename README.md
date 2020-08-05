@@ -5,10 +5,11 @@
 <p align="center"> Angular 2+, HTML5, CSS3/SCSS </p>
 
 <h2 align="center"> Para testar </h2>
-
 <p align="center"> basta executar no terminal ng server e acessar o localost:4200 </p>
 
+<p align="center">
 <img src="https://img.shields.io/static/v1?label=angular&message=BUILD&color=red&style=for-the-badge&logo=ANGULAR"/>
+</p>
 
 <p align="center"> basta executar no terminal ng build </p>
 
