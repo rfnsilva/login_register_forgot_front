@@ -2,10 +2,10 @@
 <h4 align="center"> Projeto com foco nas funcionalidades de registrar/logar e recuperação de senha </h4><br />
 
 <h2 align="center"> Tecnologias usadas <span>FRONT-END</span> </h2>
-<h4p align="center"> Angular 2+, HTML5, CSS3/SCSS, JWT, Bcrypt </h4><br />
+<h4 align="center"> Angular 2+, HTML5, CSS3/SCSS, JWT, Bcrypt </h4><br />
 
 <h2 align="center"> Como testar </h2>
-<h4>Primeiro rode npm install para instalar as dependencias</h4><br />
+<h4 align="center">Primeiro rode npm install para instalar as dependencias</h4><br />
 <p align="center">
 <img src="https://img.shields.io/static/v1?label=angular&message=SERVE&color=red&style=for-the-badge&logo=ANGULAR"/>
 </p>
